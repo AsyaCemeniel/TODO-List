@@ -23,7 +23,7 @@ function addTodo(event) {
 
   //Check Mark Button
   const completedButton = document.createElement("button");
-  completedButton.innerHTML = '<i class="far fa-check"></i>';
+  completedButton.innerHTML = '<i class="fas fa-check-circle"></i>';
   completedButton.classList.add("completed-btn");
 
   todoDiv.appendChild(completedButton);
@@ -37,4 +37,7 @@ function addTodo(event) {
 
   //APPEND TO LIST
   todoList.appendChild(todoDiv);
+
+  //Clear Todo input value
+  todoInput.value = "";
 }
