@@ -93,13 +93,7 @@ function filterTodo(event) {
 }
 
 function saveLocalTodos(todo) {
-  let todos;
-  //Check if Todos already exist
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
+  let todos = checkTodos();
 
   todos.push(todo);
   //Save Todos
@@ -107,13 +101,7 @@ function saveLocalTodos(todo) {
 }
 
 function getTodos() {
-  let todos;
-
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
+  let todos = checkTodos();
 
   todos.forEach(function (todo) {
     const todoDiv = document.createElement("div");
@@ -142,6 +130,15 @@ function getTodos() {
 }
 
 function removeLocalTodos(todo) {
+  let todos = checkTodos();
+
+  const todoIndex = todo.children[0].innerText;
+  todos.splice(todos.indexOf(todoIndex), 1);
+
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function checkTodos() {
   let todos;
 
   if (localStorage.getItem("todos") === null) {
@@ -150,8 +147,5 @@ function removeLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
 
-  const todoIndex = todo.children[0].innerText;
-  todos.splice(todos.indexOf(todoIndex), 1);
-
-  localStorage.setItem("todos", JSON.stringify(todos));
+  return todos;
 }

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: linear-gradient(120deg, #1cc0e5, #366ab5);
+  background-image: linear-gradient(120deg, #88e1f5, #366ab5);
   color: beige;
   font-family: "Ubuntu", sans-serif;
   min-height: 100vh;
@@ -14,6 +14,7 @@ body {
 
 header {
   font-size: 1.5rem;
+  color: #356cb6;
 }
 
 header,
@@ -22,6 +23,11 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+span {
+  font-size: 4rem;
+  color: beige;
 }
 
 /*----------------Form-----------------*/
@@ -33,6 +39,7 @@ form button {
   font-size: 2rem;
   border: none;
   background: #eefffa;
+  color: #356cb6;
 }
 
 form button {
@@ -67,7 +74,7 @@ button:focus {
 .todo {
   margin: 0.5rem;
   background: #eefffa;
-  color: black;
+  color: #1d5db1;
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
