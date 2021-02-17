@@ -1,0 +1,53 @@
+/*---------------Global styles-------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #1cc0e5, #366ab5);
+  color: beige;
+  font-family: "Ubuntu", sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------------Form-----------------*/
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  border: none;
+  background: #eefffa;
+}
+
+form button {
+  color: #356cb6;
+  background: #eefffa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form button:hover {
+  background: #356cb6;
+  color: #eefffa;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
