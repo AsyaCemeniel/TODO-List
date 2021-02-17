@@ -48,7 +48,11 @@ function deleteCheck(event) {
   //Delete TODO
   if (item.classList[0] === "delete-btn") {
     const todo = item.parentElement;
-    todo.remove();
+    //Animation
+    todo.classList.add("fall");
+    todo.addEventListener("transitionend", function () {
+      setTimeout(() => todo.remove(), 0.5);
+    });
   }
 
   //Check Mark

@@ -102,3 +102,14 @@ button:focus {
 .fa-skull-crossbones {
   pointer-events: none;
 }
+
+/*----------------Animation-----------------*/
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotate(20deg);
+  opacity: 0;
+}
